@@ -1,0 +1,158 @@
+.app {
+    height: 60vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.inner-wrapper {
+    width: 95vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-wrapper h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5vh;
+}
+
+.inner-wrapper h3 {
+    text-align: center;
+    font-size: 17px;
+    margin-bottom: 5vh;
+}
+
+.steps {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fa9d5b;
+    border-radius: 50%;
+    height: fit-content;
+    width: 200px;
+    height: 200px;
+    margin: 3vw;
+}
+
+.numbered-step-num {
+    margin-top: 0;
+    padding: 0 0 0.2rem 0;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.step p {
+    color: #fff;
+    text-align: center;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.link {
+    color: black;
+}
+
+.hover-underline-animation:hover {
+    color: white;
+}
+
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+@media screen and (max-width: 600px) {
+    .container-2{
+        margin-right: 2px;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+    .inner-wrapper h2{
+        font-size: 15px;
+        margin: 5px 0px;
+    }
+
+    .inner-wrapper h3{
+        padding-bottom: 2px;
+        margin-bottom: 5px;
+        font-size: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 10px;
+    }
+    .steps {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .step {
+        width: 85px;
+        height: 85px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step p {
+        width: 80%;
+        font-size: 10px;
+    }
+
+    .link-container {
+        margin-top: 20px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
+    .numbered-step-num {
+        margin-top: 5px;
+        font-size: 22px;
+    }
+
+
+}

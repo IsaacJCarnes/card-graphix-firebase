@@ -1,0 +1,68 @@
+h1 {
+    font-weight: 500;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+    margin-left: 25px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-variant: small-caps;
+}
+
+#top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+}
+
+.intro {
+    font-size: 18px;
+    color: black;
+
+}
+
+
+.container-2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 25px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.section {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 400;
+    border: none;
+    margin: 0 10px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+.section:hover {
+    color: rgb(5, 91, 91);
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+
+    }
+}
