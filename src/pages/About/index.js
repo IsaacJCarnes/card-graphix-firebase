@@ -20,20 +20,20 @@ const About = () => {
             <div className="steps">
                 <div className="step">
                     <div className="numbered-step-num"> 1 </div>
-                        <p>Pick out the design.</p>
+                        <p>Pick out the layout</p>
                 </div>
                 <div className="step">
                     <div className="numbered-step-num"> 2 </div>
-                        <p>Choose fields you want to add.</p>
+                        <p>Edit fields on card</p>
                 </div>
                 <div className="step">
                     <div className="numbered-step-num"> 3 </div>
-                        <p>Export and done!</p>
+                        <p>Export and done</p>
                 </div>
             </div>
             <div className="link-container">
                 <Link className="hover-underline-animation" to="/card">
-                    <p className="link"> Click here to get started!  </p>
+                    <p className="link"> Click here to get started</p>
                 </Link>
             </div>
         </div>

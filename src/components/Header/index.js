@@ -19,7 +19,13 @@ const Header = () => {
         <h1>Card Graphix</h1>
       </Link>
       </div>
-      {false ? (
+    </div>
+
+  );
+};
+
+/*
+{false ? (
           <div className='container-2'>
           <button className="logout section" onClick={logout}>
             Logout
@@ -35,10 +41,7 @@ const Header = () => {
             </Link>
           </div>
         )}
-    </div>
-
-  );
-};
+        */
 
 export default Header;
 
