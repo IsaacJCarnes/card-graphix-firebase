@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 import About from './pages/About';
+import Card from './pages/Card';
+
 
 /*
 import Profile from './pages/profile/Profile';
@@ -79,6 +82,7 @@ function App() {
           <div className="m-1 d-flex flex-column align-content-center justify-content-center">
             <Routes>
               <Route exact path={"/"} element={<About />}/>
+              <Route exact path={"/card"} element={<Card />}/>
             </Routes>
           </div>
           <Footer />

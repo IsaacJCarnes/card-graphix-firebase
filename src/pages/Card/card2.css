@@ -1,0 +1,13 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p.header {
+    color: black;
+    margin: 0px;
+}

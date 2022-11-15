@@ -1,0 +1,151 @@
+.app {
+    display: flex;
+    height: fit-content;
+}
+
+.CardPage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.CardView{
+    height: 2in;
+    width: 3.5in;
+    position: relative;
+    background-color: white;
+    border: 1px black;
+    border-style: solid;
+    overflow: hidden;
+    
+}
+
+.CardView .Background{
+    position: absolute;
+    z-index: 1;
+}
+
+.CardView img{
+    position: absolute;
+    z-index: 3;
+}
+
+.CardView div{
+    position: absolute;
+    font-size: 8px;
+    z-index: 6;
+}
+
+.UtilityTools{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+.btn {
+    width: 180px;
+    margin:0px 3px;
+}
+
+.LayoutBtn{
+    width: 2.5in;
+    margin: 3px;
+}
+
+.LayoutBtn img{
+    width: 100%;
+    margin: 1px;
+    border: 1px solid black;
+}
+
+.BuildTools {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.ComponentButtons{
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgrey;
+    margin-right: 2px;
+    width: 190px;
+}
+
+.ComponentButtons div{
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.ComponentButtons > button{
+    height: 24px;
+    margin: 2px;
+    font-size: 14px;
+}
+
+.PreferencesForm{
+    background-color: lightgrey;
+    margin-left: 2px;
+    width: 190px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.PreferencesForm div{
+    text-align: center;
+    font-size: 18px;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.PreferencesForm label{
+    font-size: 16px;
+    margin: 2px 0px 0px 0px;
+}
+
+.PreferencesForm input{
+    font-size: 14px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+}
+
+.SaveBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.SaveTools {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes shadowCircle {
+    0% {box-shadow: 1px 1px;}
+    25% {box-shadow: 1px -1px;}
+    50% {box-shadow: -1px -1px;}
+    75% {box-shadow: -1px 1px;}
+}
+
+/* media query to make portfolio images take up full width on small screens */
+@media screen and (max-width: 700px) {
+.LayoutBtn{
+    width: 48%;
+}
+}
