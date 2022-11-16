@@ -44,6 +44,7 @@
     margin-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
   
 }
 
@@ -71,32 +72,37 @@
     margin-top: 10px;
 }
 
+.FormHolder{
+    background-color: unset;
+    width: 190px;
+}
+
 .ComponentButtons{
     margin-right: 2px;
     display: flex;
     flex-direction: column;
-    background-color: lightgrey;
     margin-right: 2px;
-    width: 190px;
 }
 
 .ComponentButtons div{
     text-align: center;
     font-size: 18px;
-    text-decoration: underline;
-    font-weight: 900;
+    text-decoration: none;
+    font-weight: bolder;
+    border-bottom: 1px solid black;
 }
 
-.ComponentButtons > button{
+.ComponentButtons button{
     height: 24px;
     margin: 2px;
     font-size: 14px;
+    background-color: unset;
+    border: none;
+    font-weight: bold;
 }
 
 .PreferencesForm{
-    background-color: lightgrey;
     margin-left: 2px;
-    width: 190px;
     padding-bottom: 3px;
     display: flex;
     flex-direction: column;
@@ -106,20 +112,31 @@
 .PreferencesForm div{
     text-align: center;
     font-size: 18px;
-    text-decoration: underline;
-    font-weight: 900;
+    text-decoration: none;
+    font-weight: bolder;
+    border-bottom: 1px solid black;
 }
 
 .PreferencesForm label{
+    font-weight: bold;
     font-size: 16px;
     margin: 2px 0px 0px 0px;
 }
 
 .PreferencesForm input{
     font-size: 14px;
-    width: 90%;
+    min-width: max-content;
+    width: 50%;
     text-align: center;
     margin: auto;
+    border: none;
+    margin-bottom: 1px;
+}
+
+.PreferencesForm input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
 }
 
 .SaveBtn {
@@ -141,6 +158,32 @@
     25% {box-shadow: 1px -1px;}
     50% {box-shadow: -1px -1px;}
     75% {box-shadow: -1px 1px;}
+}
+
+@media screen and (max-width: 400px) {
+    .BackBtn{
+        width: 45%;
+        padding: 3px 3px;
+    }
+
+    #LogoParent{
+        width: 45%;
+    }
+    .AddLogo{
+        width: 100%;
+        padding: 3px 3px;
+    }
+
+    .FormHolder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+    }
+
+    .ComponentButtons button{
+        width: max-content;
+    }
 }
 
 /* media query to make portfolio images take up full width on small screens */

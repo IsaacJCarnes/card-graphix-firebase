@@ -1,4 +1,6 @@
 Add feedback to registration and login
-Reimplement image upload and retrieval
+Add image upload with profiles
 Implement google signup/login
 Implement save cards feature
+______________COMPLETED________________
+Add logo upload locally
