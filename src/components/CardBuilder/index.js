@@ -4,6 +4,8 @@ import Frag from '../../utils/componentUtil/frag';
 import Pdf from "./pdf";
 import PreferencesForm from "../PreferencesForm";
 import Cloudinary from '../Cloudinary';
+import LocalImage from './localImage.js';
+
 
 /*import { useMutation, useQuery } from '@apollo/client';
 import { CREATE_CARD } from '../../utils/mutations';
@@ -159,12 +161,12 @@ const CardBuilder = () => {
   }
 
   const UploadImageBtn = () => {
-    return <></>;
-    /*if(selectedLayout === 0){
+    if(selectedLayout === 0){
       return <></>
     } else {
-      return <Cloudinary key={"uploadBtn"} SetLogo={SetLogo}/>
-    }*/
+      return <LocalImage setLocalImage={SetLogo}/>
+      //return <Cloudinary key={"uploadBtn"} SetLogo={SetLogo}/>
+    }
   }
 
   /* Save Card Button */
