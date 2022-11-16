@@ -6,6 +6,7 @@ const PreferencesForm = ({compClass, compProp, compValue, compIndex, SetProp}) =
   let inp = <input 
   type="text"
   id={formClass}
+  placeholder="none"
   defaultValue={currentVal}
   onChange={(e) => {
     e.preventDefault();

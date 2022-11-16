@@ -123,7 +123,7 @@ const CardBuilder = () => {
     if(selectedLayout === 0){
       return <Frag key={tempKey} />;
     }
-     return (<button key={tempKey} onClick={(e) => {
+     return (<button key={tempKey} className={compClass === item[1] ? "selectedBtn" : ""} onClick={(e) => {
       e.preventDefault();
       //Use Reducer to change state
       dispatch({type: "card-layout", selectedLayout: selectedLayout, selectedComp: selectedComp, newValue: [compValue, compClass, {...compProps}]});
