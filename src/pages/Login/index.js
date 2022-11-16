@@ -13,14 +13,12 @@ const Login = ({ setUserData }) => {
   useEffect(() => {
     if (loading) return;
     if (user) {
-      console.log(user);
       fetchData(user.uid);
     }
   }, [user, loading]);
 
   const fetchData = (uid) => {
     getUserData(uid).then((data) => {
-      console.log(data);
       if (data.loggedIn) {
         //handleLogin(data);
         setUserData(data);

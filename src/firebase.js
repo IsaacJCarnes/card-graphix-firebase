@@ -103,7 +103,6 @@ const logInWithEmailAndPassword = async (email, password) => {
   const getUserData = async (uid) => {
     const docRef = doc(db, "userCards", uid);
     const docData = await getDoc(docRef);
-    console.log("got data");
     if (docData.exists()) {
       const data = docData.data();
       return {loggedIn: true, user: {card1: data.card1, card2: data.card2, card3: data.card3}};
