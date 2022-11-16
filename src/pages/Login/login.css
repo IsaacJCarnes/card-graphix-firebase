@@ -1,0 +1,44 @@
+.login-container {
+    margin-top: 50px;
+    border-radius: 5%;
+
+}
+
+
+.card {
+    border-color: darkgrey;
+    border: none;
+    min-width: 340px;
+    min-height: 330px;
+    padding: 30px;
+   
+}
+
+.title {
+    text-align: center;
+    font-size: 25px;
+    font-variant: small-caps;
+   
+}
+
+.button {
+    outline: none;
+    display: flex;
+    justify-content: center;
+}
+
+.input1 {
+    border-color: #A5A58D;
+    outline: none;
+    margin: 0 0 20px;
+    height: 50px;
+  
+}
+
+.input2 {
+    border-color: #A5A58D;
+    outline: none;
+    margin: 0 0 5rem;
+    height: 50px;
+}
+

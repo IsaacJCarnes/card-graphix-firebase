@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './components/Header';
@@ -6,12 +6,12 @@ import Footer from './components/Footer';
 
 import About from './pages/About';
 import Card from './pages/Card';
-
+import Signup from './pages/Signup';
+import Login from './pages/Login';
 
 /*
 import Profile from './pages/profile/Profile';
-import Signup from './pages/signup/Signup';
-import Login from './pages/login/Login';
+
 import ContactUs from './pages/contact-us/ContactUs';
 import Card from './pages/card/Card';
 
@@ -75,14 +75,22 @@ function App() {
 */
 
 function App() {
+  const [userData, setUserData] = useState({loggedIn: false})
+
   return (
         <Router>
         <div className="sections">
-          <Header />
+          <Header userData={userData} setUserData={setUserData}/>
           <div className="m-1 d-flex flex-column align-content-center justify-content-center">
             <Routes>
               <Route exact path={"/"} element={<About />}/>
               <Route exact path={"/card"} element={<Card />}/>
+
+              <Route exact path={"/signup"} element={<Signup setUserData={setUserData} />}/>
+              <Route exact path={"/login"} element={<Login setUserData={setUserData} />}/>
+
+
+
             </Routes>
           </div>
           <Footer />

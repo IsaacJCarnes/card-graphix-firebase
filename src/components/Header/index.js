@@ -1,26 +1,36 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import "./header.css"
-//import Auth from '../../utils/auth';
-//import { motion } from "framer-motion";
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./header.css";
 
+import { logout } from "../../firebase";
 
+const Header = ({ userData, setUserData }) => {
+  const navigate = useNavigate();
 
-const Header = () => {
-  const logout = (event) => {
-    event.preventDefault();
-    //Auth.logout();
-  };
- 
   return (
     <div className="Header">
-      <div id='top'>
-      <Link className="logo" to="/">
-        <h1>Card Graphix</h1>
-      </Link>
+      <div id="top">
+        <Link className="logo" to="/">
+          <h1>Card Graphix</h1>
+        </Link>
       </div>
+      {userData.loggedIn ? (
+        <div className="container-2">
+          <button className="logout section" onClick={(e) => {e.preventDefault(); logout(); setUserData({loggedIn: false}); navigate("");}}>
+            Logout
+          </button>
+        </div>
+      ) : (
+        <div className="container-2">
+          <Link className="login section" to="/login">
+            Login
+          </Link>
+          <Link className="signup section" to="/signup">
+            Signup
+          </Link>
+        </div>
+      )}
     </div>
-
   );
 };
 
