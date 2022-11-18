@@ -150,15 +150,9 @@
 
 .PreferencesForm input:focus{
     outline: none;
+    border-bottom: 1px solid black;
+    margin: 0px;
 }
-
-/*.PreferencesForm input:focus::after{
-    content: ">";
-    position: absolute;
-    color: black;
-    left: 10px;
-    top: 20px;;
-}*/
 
 .SaveBtn {
     width: 100%;

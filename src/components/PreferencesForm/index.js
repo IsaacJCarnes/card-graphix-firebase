@@ -45,7 +45,7 @@ const PreferencesForm = ({compClass, compProp, compValue, compIndex, SetProp}) =
 
   return(
     <form onSubmit={e => e.preventDefault()}>
-      <label className='bg-secondary'>{compProp}</label>
+      <label className='bg-secondary'>{compProp[0].toUpperCase() + compProp.substring(1).replace(/([a-z])([A-Z])/g, '$1 $2')}</label>
       {inp}
     </form>
   )
