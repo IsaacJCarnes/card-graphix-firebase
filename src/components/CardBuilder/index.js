@@ -110,7 +110,7 @@ const CardBuilder = () => {
     else{
       return( 
       <div className="PreferencesForm FormHolder">
-        <div>{compClass}</div>
+        {/*<div>{compClass}</div>*/}
         {textEdit}
         {preferences}
       </div>);
@@ -142,7 +142,6 @@ const CardBuilder = () => {
     else{
       return( 
         <div className="ComponentButtons FormHolder">
-          <div>Components</div>
         {componentButtons}
       </div>);
     }  
