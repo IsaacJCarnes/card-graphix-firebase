@@ -44,6 +44,7 @@
     margin-top: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
   
 }
 
@@ -69,57 +70,134 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 10px;
+    height: fit-content;
+}
+
+.FormHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: unset;
+    width: 190px;
+    height: 100%;
 }
 
 .ComponentButtons{
     margin-right: 2px;
     display: flex;
     flex-direction: column;
-    background-color: lightgrey;
     margin-right: 2px;
-    width: 190px;
+    z-index: 2;
 }
 
 .ComponentButtons div{
     text-align: center;
     font-size: 18px;
-    text-decoration: underline;
-    font-weight: 900;
+    text-decoration: none;
+    font-weight: bolder;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.ComponentButtons > button{
+.ComponentButtons button{
     height: 24px;
     margin: 2px;
-    font-size: 14px;
+    font-size: 15px;
+    background-color: unset;
+    border: none;
+    font-weight: bold;
+    width: fit-content;
+}
+
+.ComponentButtons .selectedBtn{
+    width: 106%;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    background-color: white;
+    z-index: 2;
+
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 .PreferencesForm{
-    background-color: lightgrey;
     margin-left: 2px;
-    width: 190px;
     padding-bottom: 3px;
-    display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
+    border: 1px solid black;
+    z-index: 1;
+    /*background-color: lightblue;*/
 }
+
+.PreferencesForm form{
+    width: fit-content;
+}
+
 
 .PreferencesForm div{
     text-align: center;
     font-size: 18px;
-    text-decoration: underline;
-    font-weight: 900;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
 .PreferencesForm label{
-    font-size: 16px;
+    font-weight: bold;
+    font-size: 15px;
     margin: 2px 0px 0px 0px;
 }
 
 .PreferencesForm input{
     font-size: 14px;
-    width: 90%;
+    width: 100%;
     text-align: center;
-    margin: auto;
+    border: none;
+    margin-bottom: 1px;
+    background-color: unset;
+}
+
+.PreferencesForm input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+    margin: 0px;
+}
+
+.InputWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.InputWrapper.Number input{
+    margin-left: 10%;
+    margin-bottom: 1px;
+    width: 50%;
+    text-align: right;
+}
+.InputWrapper.Number .suffix{
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    margin: unset;
+    margin-bottom: 2px;
+    width: 30%;
+    line-height: 1.15;
+}
+
+.InputWrapper.Number input:focus{
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
+}
+
+.InputWrapper.Number input:focus~.suffix{
+    outline: none;
+    border-bottom: 1px solid black;
+    margin-bottom: 0px;
 }
 
 .SaveBtn {
@@ -141,6 +219,33 @@
     25% {box-shadow: 1px -1px;}
     50% {box-shadow: -1px -1px;}
     75% {box-shadow: -1px 1px;}
+}
+
+@media screen and (max-width: 400px) {
+    .BackBtn{
+        width: 45%;
+        padding: 3px 3px;
+    }
+
+    #LogoParent{
+        width: 45%;
+    }
+    .AddLogo{
+        width: 100%;
+        padding: 3px 3px;
+    }
+
+    .FormHolder{
+        width: 45%;
+    }
+
+    .ComponentButtons button{
+        width: max-content;
+    }
+
+    .ComponentButtons .selectedBtn{
+        width: 107%;
+    }
 }
 
 /* media query to make portfolio images take up full width on small screens */

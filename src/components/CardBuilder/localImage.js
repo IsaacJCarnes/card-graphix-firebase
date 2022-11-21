@@ -11,9 +11,9 @@ const localImage = ({ setLocalImage }) => {
   };
 
   return (
-    <div>
+    <div id="LogoParent">
       <button
-        className="btn btn-primary"
+        className="AddLogo btn btn-primary"
         onClick={(e) => {
           e.preventDefault();
           hiddenFileInput.current.click();
