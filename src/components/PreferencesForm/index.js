@@ -31,7 +31,7 @@ const PreferencesForm = ({
             changeValue(compClass, compProp, e.target.value);
           }}
         />
-        <div className="suffix">{valSuffix}</div>
+        <div className="suffix" onClick={(e) => {e.preventDefault(); e.target.previousSibling.focus()}}>{valSuffix}</div>
         </div>
       );
     } else {

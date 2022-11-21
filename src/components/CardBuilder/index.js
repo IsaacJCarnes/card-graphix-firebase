@@ -68,8 +68,6 @@ const CardBuilder = () => {
 
   const layoutSelector = layoutImages.map((item, i) => CreateLayoutSelector(item, i));
 
-  //dispatch({type: "card-layout", selectedLayout: 0, selectedComp: 0, newValue: ["Micky", "Name", {left: "10%", top: "5%"}]});
-  //console.log(dispatch({type: 'card-layout', selectedLayout: 0, layout: ["new comp", "heyyy", {top: "4%", left: "10%"}]}));
 
   const CreateCardComp = (item, i) => {
     let tempKey = "comp" + i;

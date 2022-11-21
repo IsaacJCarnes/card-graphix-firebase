@@ -164,6 +164,7 @@
     outline: none;
     border-bottom: 1px solid black;
     margin: 0px;
+    border-radius: 0%;
 }
 
 .InputWrapper{
@@ -192,12 +193,14 @@
     outline: none;
     border-bottom: 1px solid black;
     margin-bottom: 0px;
+    border-radius: 0%;
 }
 
 .InputWrapper.Number input:focus~.suffix{
     outline: none;
     border-bottom: 1px solid black;
     margin-bottom: 0px;
+    border-radius: 0%;
 }
 
 .SaveBtn {
