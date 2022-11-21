@@ -19,7 +19,7 @@ const PreferencesForm = ({
       compProp !== "color"
     ) {
       return (
-        <div className="InputWrapper">
+        <div className="InputWrapper Number">
         <input
           type="number"
           id={formClass}
@@ -31,12 +31,12 @@ const PreferencesForm = ({
             changeValue(compClass, compProp, e.target.value);
           }}
         />
-        <p className="suffix">{valSuffix}</p>
+        <div className="suffix">{valSuffix}</div>
         </div>
       );
     } else {
       return(
-        <div className="InputWrapper">
+        <div className="InputWrapper Text">
           <input
         type="text"
         id={formClass}
@@ -52,19 +52,6 @@ const PreferencesForm = ({
       )
     }
   };
-  let inp = (
-    <input
-      type="text"
-      id={formClass}
-      placeholder="none"
-      defaultValue={currentVal}
-      onChange={(e) => {
-        e.preventDefault();
-        console.log(e.target.value);
-        changeValue(compClass, compProp, e.target.value);
-      }}
-    />
-  );
 
   const changeValue = (className, property, value) => {
     let withSuffix = value + valSuffix;
@@ -87,19 +74,6 @@ const PreferencesForm = ({
     }
     return false; //False
   };
-
-  /*if (currentVal !== compValue) {
-    //console.log(currentVal + " " + compValue)
-    console.log("change value");
-    let suffixLength = 0;
-    if(compValue.substring(compValue.length-1) === "%"){
-      suffixLength = 1;
-    } else if (compValue.substring(compValue.length-2) === "px" || compValue.substring(compValue.length-2) === "in"){
-      suffixLength = 2;
-    }
-    document.getElementById(formClass).value = compValue.substring(0, compValue.length-suffixLength);
-    setCurrentVal(compValue.substring(0, compValue.length-suffixLength));
-  }*/
 
   useEffect(() => {
     let suffixLength = 0;
