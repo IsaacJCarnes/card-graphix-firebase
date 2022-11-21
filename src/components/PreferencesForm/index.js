@@ -22,6 +22,7 @@ const PreferencesForm = ({
         <div className="InputWrapper Number">
         <input
           type="number"
+          inputMode="numeric"
           id={formClass}
           placeholder="none"
           defaultValue={currentVal}
