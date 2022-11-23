@@ -45,8 +45,8 @@ THEN they will be able to access their past card
 
 ## Screenshots
 
-* [Card Graphix Homepage](./homepage.png)
-* [Card Graphix Creation Page](./cardpage.png)
+![Card Graphix Homepage](./homepage.png)
+![Card Graphix Creation Page](./cardpage.png)
 
 ## Features
 

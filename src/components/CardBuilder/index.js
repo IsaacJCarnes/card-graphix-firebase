@@ -4,6 +4,8 @@ import Frag from '../../utils/componentUtil/frag';
 import Pdf from "./pdf";
 import PreferencesForm from "../PreferencesForm";
 import Cloudinary from '../Cloudinary';
+import LocalImage from './localImage.js';
+
 
 /*import { useMutation, useQuery } from '@apollo/client';
 import { CREATE_CARD } from '../../utils/mutations';
@@ -66,8 +68,6 @@ const CardBuilder = () => {
 
   const layoutSelector = layoutImages.map((item, i) => CreateLayoutSelector(item, i));
 
-  //dispatch({type: "card-layout", selectedLayout: 0, selectedComp: 0, newValue: ["Micky", "Name", {left: "10%", top: "5%"}]});
-  //console.log(dispatch({type: 'card-layout', selectedLayout: 0, layout: ["new comp", "heyyy", {top: "4%", left: "10%"}]}));
 
   const CreateCardComp = (item, i) => {
     let tempKey = "comp" + i;
@@ -108,7 +108,7 @@ const CardBuilder = () => {
     else{
       return( 
       <div className="PreferencesForm FormHolder">
-        <div>{compClass}</div>
+        {/*<div>{compClass}</div>*/}
         {textEdit}
         {preferences}
       </div>);
@@ -121,7 +121,7 @@ const CardBuilder = () => {
     if(selectedLayout === 0){
       return <Frag key={tempKey} />;
     }
-     return (<button key={tempKey} onClick={(e) => {
+     return (<button key={tempKey} className={compClass === item[1] ? "selectedBtn" : ""} onClick={(e) => {
       e.preventDefault();
       //Use Reducer to change state
       dispatch({type: "card-layout", selectedLayout: selectedLayout, selectedComp: selectedComp, newValue: [compValue, compClass, {...compProps}]});
@@ -140,7 +140,6 @@ const CardBuilder = () => {
     else{
       return( 
         <div className="ComponentButtons FormHolder">
-          <div>Components</div>
         {componentButtons}
       </div>);
     }  
@@ -159,12 +158,12 @@ const CardBuilder = () => {
   }
 
   const UploadImageBtn = () => {
-    return <></>;
-    /*if(selectedLayout === 0){
+    if(selectedLayout === 0){
       return <></>
     } else {
-      return <Cloudinary key={"uploadBtn"} SetLogo={SetLogo}/>
-    }*/
+      return <LocalImage setLocalImage={SetLogo}/>
+      //return <Cloudinary key={"uploadBtn"} SetLogo={SetLogo}/>
+    }
   }
 
   /* Save Card Button */
